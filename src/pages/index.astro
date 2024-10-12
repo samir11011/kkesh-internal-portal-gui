@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+const isDev = import.meta.env.MODE === 'development';
+const styleFile = isDev ? '/src/styles/global.css': 'assets/css/styles.css' ;
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href={styleFile} />
+    <script src="/node_modules/alpinejs/dist/cdn.min.js" defer is:inline
+    ></script>
+    <script src="/node_modules/flowbite/dist/flowbite.js" defer is:inline
+    ></script>
+  </head>
+  <body>
+    <Layout />
+  </body>
+</html>

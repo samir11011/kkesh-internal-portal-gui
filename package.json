@@ -1,0 +1,26 @@
+{
+  "name": "grateful-gravity",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build && npm run build:css",
+    "build:css": "npx postcss src/styles/global.css -o dist/assets/css/styles.css",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.2",
+    "alpinejs": "^3.14.1",
+    "astro": "^4.13.3",
+    "autoprefixer": "^10.4.20",
+    "flowbite": "^2.5.2",
+    "sass": "^1.77.8",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "postcss-cli": "^11.0.0"
+  }
+}
