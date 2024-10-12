@@ -1,0 +1,183 @@
+---
+import "./e-service.scss";
+---
+
+
+<section >
+    <div class="self-stretch  bg-white flex-col justify-start items-center flex">
+        <!-- start of header -->
+        <div class="self-stretch px-8 py-5 bg-white justify-start items-center gap-3 inline-flex">
+            <div class="grow shrink basis-0 h-12 justify-start items-center gap-3.5 flex">
+                <div class="p-3 bg-[#f6f8fa] rounded-[96px] justify-center items-center gap-3 flex">
+                    <img src="./assets/icons/sidebar/e-services-icon.svg" alt="home" />
+                </div>
+                <div class="grow shrink basis-0 flex-col justify-start items-start gap-1 inline-flex">
+                    <div class="self-stretch text-[#0a0d14] text-lg font-medium  leading-normal">E-Services</div>
+                    <div class="self-stretch text-[#525866] text-sm font-normal  leading-tight">Check each Department provided E-Services on selecting it</div>
+                </div>
+            </div>
+            <div class="p-2.5 bg-white rounded-lg justify-center items-center gap-2 flex">
+                <div class="w-5 h-5 relative cursor-pointer" onclick="toggleSearchBar()">
+                    <img src="./assets/icons/header/search-2-line.svg" alt="home" />
+                </div>
+            </div>
+            <div class="p-2.5 bg-white rounded-lg justify-center items-center gap-2 flex">
+                <div class="w-5 h-5 relative">
+                    <img src="./assets/icons/header/notification-3-line.svg" alt="home" />
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div class="self-stretch flex-col justify-start items-center gap-1.5 flex">
+            <!-- start of search container -->
+            <div id="search-bar" class="self-stretch h-10 px-8 flex-col justify-start items-center gap-1 flex">
+
+                <form class="w-[100%] rounded-[10px] border border-[#e2e4e9]">
+                    <label for="search" class="mb-2 text-sm font-medium text-black sr-only dark:text-white ">Search</label>
+                    <div class="w-[100%] relative">
+                        <div class="w-[100%] absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
+                            <img class="w-4 h-4 text-gray-500 dark:text-gray-400" src="./assets/icons/header/search-2-line.svg" alt="search" />
+                        </div>
+                        <input type="search" id="search" class="search h-[40px] w-full block p-4 ps-10 text-sm text-gray-900 rounded-lg bg-white  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Search" required />
+                    </div>
+                </form>
+
+            </div>
+            <!-- end text input for search -->
+
+            <!-- start of tabs -->
+            <div class="w-[100%] border-b border-gray-200 dark:border-gray-700">
+                <ul class="flex px-8 flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                    data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">ALL</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Security</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Transportation</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-styled-tab" data-tabs-target="#styled-contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Finances</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- end of tabs -->
+        </div>
+    </div>
+    <!-- start of content-->
+
+
+
+
+
+    <div id="default-styled-tab-content">
+        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="flex-col justify-start items-start gap-4 flex pl-[32px]">
+                <div class="w-[1104px] justify-start items-center gap-2.5 inline-flex">
+                    <div class="justify-center items-center gap-1.5 flex">
+                        <div class="w-5 h-5 relative">
+                            <img src="./assets/icons/sidebar/home-icon.svg" alt="home" />
+                        </div>
+                        <div class="justify-center items-center gap-1 flex">
+                            <div><span class="text-[#525866] text-sm font-medium  leading-tight">Security </span><span class="text-[#cdd0d5] text-sm font-medium  leading-tight">|</span><span class="text-[#525866] text-sm font-medium  leading-tight"> </span>
+                                <span class="text-[#868c98] text-sm font-medium  leading-tight">7</span><span class="text-[#cdd0d5] text-sm font-medium  leading-tight"> Results</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]  justify-start items-start gap-4 inline-flex flex-wrap">
+                    <div class="w-[264px] h-[81px] relative">
+                        <div class="w-[264px] h-[81px] left-0 top-0 absolute bg-white rounded-2xl shadow border border-[#e2e4e9]"></div>
+                        <div class="h-[55px] left-[11.47px] top-[13px] absolute justify-start items-center gap-[11px] inline-flex">
+                            <div class="w-[55px] h-[55px] relative">
+                                <div class="w-[55px] h-[55px] left-0 top-0 absolute bg-[#f6f8fa] rounded-[100px]"></div>
+                                <img class="w-9 h-9 left-[9.53px] top-[10px] absolute" src="./assets/icons/content/box-1-line.svg" alt="Access card" />
+                            </div>
+                            <div class="w-[129px] text-[#0a0d14] text-sm font-medium  leading-tight">Access Card</div>
+                        </div>
+                    </div>
+                    <div class="w-[264px] h-[81px] relative">
+                        <div class="w-[264px] h-[81px] left-0 top-0 absolute bg-white rounded-2xl shadow border border-[#e2e4e9]"></div>
+                        <div class="h-[55px] left-[11.47px] top-[13px] absolute justify-start items-center gap-[11px] inline-flex">
+                            <div class="w-[55px] h-[55px] relative">
+                                <div class="w-[55px] h-[55px] left-0 top-0 absolute bg-[#f6f8fa] rounded-[100px]"></div>
+                                <img class="w-9 h-9 left-[9.53px] top-[10px] absolute" src="./assets/icons/content/box-1-line.svg" alt="Access card" />
+                            </div>
+                            <div class="w-[129px] text-[#0a0d14] text-sm font-medium  leading-tight">Vehicle Pass</div>
+                        </div>
+                    </div>
+                    <div class="w-[264px] h-[81px] relative">
+                        <div class="w-[264px] h-[81px] left-0 top-0 absolute bg-white rounded-2xl shadow border border-[#e2e4e9]"></div>
+                        <div class="h-[55px] left-[11.47px] top-[13px] absolute bg-white justify-start items-center gap-[11px] inline-flex">
+                            <div class="w-[55px] h-[55px] relative">
+                                <div class="w-[55px] h-[55px] left-0 top-0 absolute bg-[#f6f8fa] rounded-[100px]"></div>
+                                <img class="w-9 h-9 left-[9.53px] top-[10px] absolute" src="./assets/icons/content/box-1-line.svg" alt="Access card" />
+                            </div>
+                            <div class="w-[129px] text-[#0a0d14] text-sm font-medium  leading-tight">ID Badge</div>
+                        </div>
+                    </div>
+                    <div class="w-[264px] h-[81px] relative">
+                        <div class="w-[264px] h-[81px] left-0 top-0 absolute bg-white rounded-2xl shadow border border-[#e2e4e9]"></div>
+                        <div class="h-[55px] left-[11.47px] top-[13px] absolute justify-start items-center gap-[11px] inline-flex">
+                            <div class="w-[55px] h-[55px] relative">
+                                <div class="w-[55px] h-[55px] left-0 top-0 absolute bg-[#f6f8fa] rounded-[100px]"></div>
+                                <img class="w-9 h-9 left-[9.53px] top-[10px] absolute" src="./assets/icons/content/box-1-line.svg" alt="Access card" />
+                            </div>
+                            <div class="w-[129px] text-[#0a0d14] text-sm font-medium  leading-tight">Cargo</div>
+                        </div>
+                    </div>
+                    <div class="w-[264px] h-[81px] relative">
+                        <div class="w-[264px] h-[81px] left-0 top-0 absolute bg-white rounded-2xl shadow border border-[#e2e4e9]"></div>
+                        <div class="h-[55px] left-[11.47px] top-[13px] absolute justify-start items-center gap-[11px] inline-flex">
+                            <div class="w-[55px] h-[55px] relative">
+                                <div class="w-[55px] h-[55px] left-0 top-0 absolute bg-[#f6f8fa] rounded-[100px]"></div>
+                                <img class="w-9 h-9 left-[9.53px] top-[10px] absolute" src="./assets/icons/content/box-1-line.svg" alt="Access card" />
+                            </div>
+                            <div class="w-[129px] text-[#0a0d14] text-sm font-medium  leading-tight">Keys Request</div>
+                        </div>
+                    </div>
+                    <div class="w-[264px] h-[81px] relative">
+                        <div class="w-[264px] h-[81px] left-0 top-0 absolute bg-white rounded-2xl shadow border border-[#e2e4e9]"></div>
+                        <div class="h-[55px] left-[11.47px] top-[13px] absolute justify-start items-center gap-[11px] inline-flex">
+                            <div class="w-[55px] h-[55px] relative">
+                                <div class="w-[55px] h-[55px] left-0 top-0 absolute bg-[#f6f8fa] rounded-[100px]"></div>
+                                <img class="w-9 h-9 left-[9.53px] top-[10px] absolute" src="./assets/icons/content/box-1-line.svg" alt="Access card" />
+                            </div>
+                            <div class="w-[129px] text-[#0a0d14] text-sm font-medium  leading-tight">Visitors Form</div>
+                        </div>
+                    </div>
+                    <div class="w-[264px] h-[81px] relative">
+                        <div class="w-[264px] h-[81px] left-0 top-0 absolute bg-white rounded-2xl shadow border border-[#e2e4e9]"></div>
+                        <div class="h-[55px] left-[11.47px] top-[13px] absolute justify-start items-center gap-[11px] inline-flex">
+                            <div class="w-[55px] h-[55px] relative">
+                                <div class="w-[55px] h-[55px] left-0 top-0 absolute bg-[#f6f8fa] rounded-[100px]"></div>
+                                <img class="w-9 h-9 left-[9.53px] top-[10px] absolute" src="./assets/icons/content/box-1-line.svg" alt="Access card" />
+                            </div>
+                            <div class="w-[129px] text-[#0a0d14] text-sm font-medium  leading-tight">Vendor Pass</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript
+                swaps classes to control the content visibility and styling.</p>
+        </div>
+        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript
+                swaps classes to control the content visibility and styling.</p>
+        </div>
+        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-contacts" role="tabpanel" aria-labelledby="contacts-tab">
+            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript
+                swaps classes to control the content visibility and styling.</p>
+        </div>
+    </div>
+
+
+
+    <!-- end of content-->
+
+</section>
