@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build && npm run build:css",
-    "build:css": "postcss src/styles/global.css -o dist/assets/css",
+    "build:css": "postcss src/styles/global.css -o dist/assets/css/styles.css",
     "preview": "astro preview",
     "astro": "astro"
   },
